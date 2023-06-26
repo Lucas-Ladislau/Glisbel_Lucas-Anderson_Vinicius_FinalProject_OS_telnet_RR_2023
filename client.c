@@ -2,8 +2,10 @@
 #include "client_utils/client_option.h"
 #include "client_utils/log_option.h"
 #include "client_utils/error_handling.h"
-#define HOST  "127.0.0.1"
 
+char *HOST = "127.0.0.1";
+
+int COMPRESS =0; 
 int PORT = 4444; // default port
 int LOG_SAVE = 0;  
 char *LOG_NAME = NULL;
@@ -44,10 +46,8 @@ void receive(int sock) {
 }
 
 int main(int argc, char **argv) {
-  	// --port, --log, 
-  	client_possible_flags(argc, argv, &LOG_NAME, &PORT,&LOG_SAVE);
-
-
+  	// --port, --log, --host
+    client_possible_flags( argc,  argv, &LOG_NAME, &PORT, &LOG_SAVE, &HOST);
 
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == -1) perro("socket");
