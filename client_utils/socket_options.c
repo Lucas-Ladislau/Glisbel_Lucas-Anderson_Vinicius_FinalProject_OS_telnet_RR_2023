@@ -7,7 +7,7 @@
 #include <sys/socket.h>
 
 
-int change_port_client(char *new_port) {
+int change_port(char *new_port) {
   int str_size = strlen(new_port) - 7;
 
   char port[str_size + 1];

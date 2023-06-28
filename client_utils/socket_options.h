@@ -1,1 +1,1 @@
-int change_port_client(char *new_port);
+int change_port(char *new_port);

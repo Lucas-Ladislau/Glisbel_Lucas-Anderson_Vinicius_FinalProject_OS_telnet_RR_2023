@@ -12,8 +12,8 @@
 
 #include <signal.h>
 #define MAX_MSG_LENGTH 1024
-#define END_STRING "chau\n"
-#define COMPLETE_STRING "fin-respuesta"
+#define END_STRING "encerrou\n"
+#define COMPLETE_STRING "fim-resposta"
 
 #ifndef MSG_NOSIGNAL
 #define MSG_NOSIGNAL SO_NOSIGPIPE
