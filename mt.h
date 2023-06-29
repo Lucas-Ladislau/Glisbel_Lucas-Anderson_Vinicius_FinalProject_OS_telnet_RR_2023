@@ -16,7 +16,6 @@
 #define COMPLETE_STRING "fim-resposta"
 
 #ifndef MSG_NOSIGNAL
-#define MSG_NOSIGNAL SO_NOSIGPIPE
 #endif
 
 #define perro(x) {fprintf(stderr, "%s:%d: %s: %s\n", __FILE__, __LINE__, x, strerror(errno));exit(1);}

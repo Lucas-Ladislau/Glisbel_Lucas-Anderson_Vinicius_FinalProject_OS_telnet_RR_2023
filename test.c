@@ -17,7 +17,7 @@ void decompress_string(const Bytef* compressed, uLongf compressedLen, char* deco
 }
 
 int main() {
-    const char* originalString = "Texto original. dasnkdnamskldmkla sdankldasl  dklas jdasndlaskdlkasd asndlkasndlnasl dnassldnlaks n";
+    const char* originalString = "Texto original. Hello sadhjasndknasjkdnjkasndkndjknasjkdnjkasnSO";
     uLongf originalLen = strlen(originalString) + 1;
 
     printf("Original String (length: %lu bytes)\n", originalLen);

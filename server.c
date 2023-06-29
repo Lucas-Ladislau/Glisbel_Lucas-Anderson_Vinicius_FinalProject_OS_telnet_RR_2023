@@ -97,9 +97,9 @@ int main(int argc, char **argv) {
 						system(buf);
 						D("\t[%d] Finished executing command.\n", pid);
 				}
+					send(new_socket, "> ", 3, MSG_NOSIGNAL);
 				
 				
-				send(new_socket, "> ", 3, MSG_NOSIGNAL);
 			}
 			close(new_socket);
 			D("\t[%d] Dying.", pid);

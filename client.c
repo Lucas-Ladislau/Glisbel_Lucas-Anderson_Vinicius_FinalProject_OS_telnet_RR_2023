@@ -19,11 +19,11 @@ void send_cmd(int sock, int pid) {
     char str[MAX_MSG_LENGTH];
     printf("\033[32m> ");
     while (fgets(str, MAX_MSG_LENGTH, stdin) == str) {
-        if (strncmp(str, END_STRING, strlen(END_STRING)) == 0) break;
+        
+        str[strcspn(str, "\n")] = 0;
         if (send(sock, str, strlen(str)+1, 0) < 0) perro("send");
 
 		SEND_OR_RECEIVE = 0; // flag para identificar se é envio ou recebimento
-        str[strcspn(str, "\n")] = 0;
 		if (LOG_SAVE)
       		update_log(str, LOG_NAME, SEND_OR_RECEIVE);
     }
